@@ -27,7 +27,7 @@ print(len(result))
 # ① 자료의 값이 모두 같거나 모두 다르면 최빈값은 없다.
 # ② 자료의 값이 모두 다를 때, 도수가 가장 큰 값이 1개 이상 있으면 그 값은 모두 최빈값이다.
 
-numLst = [26, 37, 26, 37, 91]
+numLst = [26, 37, 26, 37, 91, 26]
 frequencyCount = 2
 modeWhich = []
 
@@ -36,6 +36,7 @@ for i in numLst:
         if numLst.count(i) == frequencyCount:
             modeWhich.append(i)
         elif numLst.count(i) > frequencyCount:
+            frequencyCount = numLst.count(i)
             modeWhich = [i]
 
 print(modeWhich)
